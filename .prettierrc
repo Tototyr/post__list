@@ -1,15 +1,14 @@
 {
-  "singleQuote": false,
+  "singleQuote": true,
   "trailingComma": "es5",
   "semi": false,
   "tabWidth": 4,
   "printWidth": 80,
   "importOrder": [
-    "^@core/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
-    "^[./]"
+    "^react(.*)$",
+    "^@(.*)$",
+    "components/(.*)",
+    "[../]"
   ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSeparation": true
 }
