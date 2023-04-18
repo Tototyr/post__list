@@ -9,7 +9,8 @@
     "prettier",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:react-redux/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,7 +21,8 @@
   },
   "plugins": [
     "react",
-    "react-hooks"
+    "react-hooks",
+    "react-redux"
   ],
   "rules": {
     "indent": [
