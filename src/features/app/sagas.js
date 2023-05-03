@@ -1,23 +1,7 @@
-import { all, call, put, take } from 'redux-saga/effects'
+import { all } from 'redux-saga/effects'
 
-import { fetchUsersFailure, fetchUsersSuccess } from '../users/actions'
-import { fetchUsersApi } from '../users/api/users'
+import { INITIALIZE_APP } from './actions'
 
-
-export function* fetchUsers() {
-    try {
-        const data = yield call(fetchUsersApi)
-        yield put(fetchUsersSuccess(data))
-    } catch (error) {
-        yield put(fetchUsersFailure(error))
-    }
-}
-
-function* watchFetchUsers() {
-    yield take("app/INITIALIZE_APP")
-    yield put(fetchUsers())
-}
-
-export default function* usersSaga() {
-    yield all([fetchUsers(), watchFetchUsers()])
+export function* appSagas() {
+    yield all(INITIALIZE_APP, console.log('app sagas initialized'))
 }
