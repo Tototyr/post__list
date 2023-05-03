@@ -1,7 +1,7 @@
-import { all } from "redux-saga/effects"
+import { all } from 'redux-saga/effects'
 
-import { loadUsersStart } from "../features/users/actions"
+import usersSaga from '../features/app/sagas'
 
-export function* rootSaga() {
-    yield all([loadUsersStart()])
+export default function* rootSaga() {
+    yield all([usersSaga()])
 }

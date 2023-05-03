@@ -1,18 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit"
-import createSagaMiddleware from "redux-saga"
+import { configureStore } from '@reduxjs/toolkit'
+import createSagaMiddleware from 'redux-saga'
 
-import { loadUsersStart } from "../features/users/actions"
-import { loadUsersOnStart } from "../features/users/sagas"
-import { rootReducer } from "./reducers"
+import { initializeApp } from '../features/app/index'
+import { rootReducer } from './reducers'
+import rootSaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
 export const store = configureStore({
     devTools: true,
     reducer: rootReducer,
-    middleware: [sagaMiddleware],
+    middleware: [sagaMiddleware]
 })
 
-sagaMiddleware.run(loadUsersOnStart)
+store.dispatch(initializeApp())
 
-store.dispatch(loadUsersStart())
+sagaMiddleware.run(rootSaga)
