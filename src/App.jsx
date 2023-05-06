@@ -1,9 +1,11 @@
 import React from 'react'
 
-import './App.css'
+import { initializeApp } from './entity/app/index'
+import { store } from './store/index'
 
-function App() {
-    return <div className='App' />
+
+store.dispatch(initializeApp())
+
+export function App() {
+    return <div className="App" />
 }
-
-export default App
