@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -24,3 +25,16 @@ dist-ssr
 *.sln
 *.sw?
 .vite
+
+*.lock
+*.json
+*.log
+*.md
+
+.gitignore
+.prettierignore
+
+node_modules
+.vite
+.idea
+.git

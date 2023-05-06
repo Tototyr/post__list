@@ -1,15 +1,34 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react-redux/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "prettier",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "plugin:import/typescript"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-redux"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4
     ],
     "parserOptions": {
         "ecmaFeatures": {
