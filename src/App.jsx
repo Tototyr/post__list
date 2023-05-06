@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { initializeApp } from './features/app/index'
+import { initializeApp } from './entity/app/index'
 import { store } from './store/index'
 
-export function App() {
-    store.dispatch(initializeApp())
 
+store.dispatch(initializeApp())
+
+export function App() {
     return <div className="App" />
 }

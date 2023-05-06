@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects'
 
-import { appSagas } from '../features/app/sagas'
-import { usersSagas } from '../features/users/sagas'
+import { appSagas } from '../entity/app'
+import { usersSagas } from '../entity/users'
 
-export default function* rootSaga() {
-    yield all([appSagas()])
-    yield all([usersSagas()])
+
+export function* rootSaga() {
+    yield all([appSagas(), usersSagas()])
 }
