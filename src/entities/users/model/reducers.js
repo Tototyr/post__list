@@ -1,13 +1,10 @@
-import {
-    FETCH_USERS,
-    FETCH_USERS_FAILURE,
-    FETCH_USERS_SUCCESS
-} from './actions'
+import { FETCH_USERS_FAILURE, FETCH_USERS_SUCCESS } from './actions'
 
 const initialState = {
     isLoading: false,
     data: [],
-    error: null
+    error: null,
+    isInitialized: false
 }
 
 export const usersReducer = (state = initialState, action) => {
@@ -15,19 +12,14 @@ export const usersReducer = (state = initialState, action) => {
     case FETCH_USERS_SUCCESS:
         return {
             ...state,
-            loading: false,
-            error: null
-        }
-    case FETCH_USERS:
-        return {
-            ...state,
-            loading: true,
+            isLoading: false,
+            error: null,
             data: action.payload
         }
     case FETCH_USERS_FAILURE:
         return {
             ...state,
-            loading: false,
+            isLoading: false,
             error: action.payload
         }
     default:

@@ -1,16 +1,15 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects'
 
 import { INITIALIZE_APP } from '../../app/model/actions'
-import { fetchUsersApi } from '../api/users'
+import { fetchUsersApi } from '../api'
 import { fetchUsersFailure, fetchUsersSuccess } from './actions'
-
 
 export function* fetchUsers() {
     try {
-        const data = yield call(fetchUsersApi)
-        yield put(fetchUsersSuccess(data))
+        const users = yield call(fetchUsersApi)
+        yield put(fetchUsersSuccess(users))
     } catch (error) {
-        yield put(fetchUsersFailure(error))
+        yield put(fetchUsersFailure(error.message))
     }
 }
 

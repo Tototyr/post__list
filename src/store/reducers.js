@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 
-import { appReducer } from '../entity/app'
-import { postsReducer } from '../entity/posts'
-import { usersReducer } from '../entity/users'
+import { appReducer } from '../entities/app'
+import { postsReducer } from '../entities/posts'
+import { usersReducer } from '../entities/users'
 
 export const rootReducer = combineReducers({
     users: usersReducer,

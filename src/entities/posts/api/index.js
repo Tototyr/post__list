@@ -1,0 +1,1 @@
+export { fetchPostsApi } from './posts'

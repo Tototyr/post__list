@@ -1,8 +1,4 @@
-import {
-    FETCH_POSTS,
-    FETCH_POSTS_FAILURE,
-    FETCH_POSTS_SUCCESS
-} from './actions'
+import { FETCH_POSTS_FAILURE, FETCH_POSTS_SUCCESS } from './actions'
 
 const initialState = {
     isLoading: false,
@@ -15,19 +11,14 @@ export const postsReducer = (state = initialState, action) => {
     case FETCH_POSTS_SUCCESS:
         return {
             ...state,
-            loading: false,
+            isLoading: false,
+            data: action.payload,
             error: null
-        }
-    case FETCH_POSTS:
-        return {
-            ...state,
-            loading: true,
-            data: action.payload
         }
     case FETCH_POSTS_FAILURE:
         return {
             ...state,
-            loading: false,
+            isLoading: false,
             error: action.payload
         }
     default:

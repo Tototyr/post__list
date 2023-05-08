@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { initializeApp } from './entity/app/index'
+import { initializeApp } from './entities/app/index'
 import { store } from './store/index'
-
 
 store.dispatch(initializeApp())
 
