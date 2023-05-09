@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { initializeApp } from './entities/app/index'
-import { store } from './store/index'
+import { initializeApp } from './entities/app'
+import { store } from './store'
 
 store.dispatch(initializeApp())
 

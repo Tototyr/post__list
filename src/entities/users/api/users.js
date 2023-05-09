@@ -1,6 +1,9 @@
+import axios from 'axios'
+
 export function fetchUsersApi() {
-    return fetch('https://jsonplaceholder.typicode.com/users')
-        .then((response) => response.json())
+    return axios
+        .get('https://jsonplaceholder.typicode.com/users')
+        .then((response) => response.data)
         .catch((error) => {
             throw error
         })

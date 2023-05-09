@@ -8,20 +8,20 @@ const initialState = {
 
 export const postsReducer = (state = initialState, action) => {
     switch (action.type) {
-    case FETCH_POSTS_SUCCESS:
-        return {
-            ...state,
-            isLoading: false,
-            data: action.payload,
-            error: null
-        }
-    case FETCH_POSTS_FAILURE:
-        return {
-            ...state,
-            isLoading: false,
-            error: action.payload
-        }
-    default:
-        return state
+        case FETCH_POSTS_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                data: action.payload,
+                error: null
+            }
+        case FETCH_POSTS_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
+            }
+        default:
+            return state
     }
 }
