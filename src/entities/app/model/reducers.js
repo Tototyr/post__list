@@ -6,12 +6,12 @@ const initialState = {
 
 export function appReducer(state = initialState, action) {
     switch (action.type) {
-    case INITIALIZE_APP:
-        return {
-            ...state,
-            isInitialized: true
-        }
-    default:
-        return state
+        case INITIALIZE_APP:
+            return {
+                ...state,
+                isInitialized: true
+            }
+        default:
+            return state
     }
 }
