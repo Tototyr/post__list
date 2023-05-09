@@ -1,8 +1,8 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-const selectGetApp = (state) => state.app
+const baseSelectApp = (state) => state.app
 
-export const selectApp = createSelector(
-    [selectGetApp],
+export const selectAppInitialized = createSelector(
+    [baseSelectApp],
     (app) => app.isInitialized
 )

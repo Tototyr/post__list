@@ -3,8 +3,7 @@ import { FETCH_USERS_FAILURE, FETCH_USERS_SUCCESS } from './actions'
 const initialState = {
     isLoading: false,
     data: [],
-    error: null,
-    isInitialized: false
+    error: null
 }
 
 export const usersReducer = (state = initialState, action) => {

@@ -6,6 +6,7 @@ export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE'
 export const fetchPostsSuccess = createAction(FETCH_POSTS_SUCCESS, (posts) => ({
     payload: posts
 }))
+
 export const fetchPostsFailure = createAction(FETCH_POSTS_FAILURE, (error) => ({
     payload: error
 }))
