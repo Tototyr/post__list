@@ -1,1 +1,1 @@
-export { fetchUsersApi } from './users'
+export { fetchUsers } from './api'

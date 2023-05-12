@@ -1,2 +1,2 @@
 export { selectPostsWithUsers } from './selectors'
-export { PostsWithUsers } from './postsWithUsers'
+export { getUsersWithPosts } from './get_users_with_posts'
