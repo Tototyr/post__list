@@ -4,5 +4,6 @@ export { usersSagas } from './sagas'
 export {
     selectUsersLoadingState,
     selectUsers,
-    selectUsersFetchError
+    selectUsersFetchError,
+    selectUserMap
 } from './selectors'
