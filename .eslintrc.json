@@ -1,4 +1,4 @@
-{
+
   "env": {
     "browser": true,
     "es2021": true
@@ -9,7 +9,12 @@
     "prettier",
     "plugin:import/errors",
     "plugin:import/warnings",
+
     "plugin:import/typescript"
+
+    "plugin:import/typescript",
+    "plugin:react-redux/recommended"
+
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,6 +25,7 @@
   },
   "plugins": [
     "react",
+
     "react-hooks"
   ],
   "rules": {
@@ -30,6 +36,15 @@
         "optionalDependencies": true,
         "peerDependencies": true
       }
+=======
+    "react-hooks",
+    "react-redux"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4
+
     ],
     "no-param-reassign": 1,
     "default-param-last": 0,
