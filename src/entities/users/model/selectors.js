@@ -16,3 +16,12 @@ export const selectUsers = createSelector(
     [baseSelectUsers],
     (users) => users.data
 )
+
+export const selectUsersMap = createSelector([selectUsers], (users) => {
+    const userMap = {}
+
+    users.forEach((user) => {
+        userMap[user.id] = user
+    })
+    return userMap
+})

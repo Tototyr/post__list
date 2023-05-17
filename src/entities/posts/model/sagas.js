@@ -1,7 +1,7 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects'
 
 import { INITIALIZE_APP } from '../../app/model/actions'
-import { fetchPostsApi } from '../api'
+import { fetchPostsApi } from '../lib'
 import { fetchPostsFailure, fetchPostsSuccess } from './actions'
 
 export function* fetchPosts() {
