@@ -1,12 +1,12 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects'
 
 import { INITIALIZE_APP } from '../../app/model/actions'
-import { fetchPosts } from '../lib'
+import { fetchPostsApi } from '../lib'
 import { fetchPostsFailure, fetchPostsSuccess } from './actions'
 
-export function* getPosts() {
+export function* fetchPosts() {
     try {
-        const data = yield call(fetchPosts)
+        const data = yield call(fetchPostsApi)
         yield put(fetchPostsSuccess(data))
     } catch (error) {
         yield put(fetchPostsFailure(error.message))
@@ -14,7 +14,7 @@ export function* getPosts() {
 }
 
 export function* watchFetchPosts() {
-    yield takeLatest(INITIALIZE_APP, getPosts)
+    yield takeLatest(INITIALIZE_APP, fetchPosts)
 }
 
 export function* postsSagas() {
