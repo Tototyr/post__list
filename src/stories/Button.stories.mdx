@@ -1,17 +1,17 @@
-import { Button } from './Button'
+import React from "react"
+import { Meta } from "@storybook/addon-docs/blocks"
+import { Button } from "./Button"
 
-## Primary
+<Meta title="Button" component={Button} />
 
-<Button primary label="Button" />
+# Button
 
-## Secondary
+### Пример 1:
 
-<Button label="Button" />
+<Button mode="primary" label="Primary Button" />
+<Button mode="secondary" backgroundColor="green" label="Secondary Button" />
 
-## Large
+```jsx
+<Button mode="primary" label="Primary Button" />
+<Button mode="secondary" backgroundColor="green" label="Secondary Button" />
 
-<Button size="large" label="Button" />
-
-## Small
-
-<Button size="small" label="Button" />
