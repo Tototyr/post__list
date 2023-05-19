@@ -5,5 +5,5 @@ export {
     selectUsersLoadingState,
     selectUsers,
     selectUsersFetchError,
-    selectUserMap
+    selectUsersMap
 } from './selectors'

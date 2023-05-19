@@ -1,1 +1,1 @@
-export { fetchPosts } from './api'
+export { fetchPostsApi } from './api'
