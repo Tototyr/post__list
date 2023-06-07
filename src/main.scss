@@ -5,3 +5,23 @@ $text-color: #2e4050;
 $gray: #74808b;
 $blue: #008aff;
 $light-blue: #97cfff;
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: local('OpenSans'), url('./fonts/OpenSans-Bold.woff') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: local('OpenSans'),
+        url('./fonts/OpenSans-SemiBold.woff') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: local('OpenSans'),
+        url('./fonts/OpenSans-Regular.woff') format('truetype');
+    font-style: normal;
+}
