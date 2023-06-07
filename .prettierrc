@@ -1,11 +1,17 @@
 {
-    "singleQuote": true,
-    "trailingComma": "none",
-    "semi": false,
-    "tabWidth": 4,
-    "printWidth": 80,
-    "importOrder": ["react", "^[../]", "^[./]"],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true,
-    "importOrderGroupNamespaceSpecifiers": false
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "tabWidth": 4,
+  "printWidth": 80,
+  "importOrder": [
+    "react",
+    "^[../]",
+    "^[./]"
+  ],
+  "htmlWhitespaceSensitivity": "css",
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": false,
+  "files.trimTrailingWhitespace": true
 }
