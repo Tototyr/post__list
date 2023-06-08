@@ -1,0 +1,33 @@
+@import 'src/main.scss';
+
+.button {
+    max-width: 160px;
+    max-height: 45px;
+    box-sizing: border-box;
+    background: $white;
+    box-shadow: 2px 2px 15px -5px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    color: #74808b;
+    align-items: center;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: $blue;
+    transition: ease 0.2s;
+
+    .button_text {
+        color: $white;
+    }
+}
+
+.button_text {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+}
