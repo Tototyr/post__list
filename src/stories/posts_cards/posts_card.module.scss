@@ -1,0 +1,45 @@
+@import 'src/main.scss';
+
+.card_container {
+    max-width: 270px;
+    max-height: 200px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: $white;
+    align-items: center;
+    box-shadow: 3px 3px 10px -5px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card_container:hover {
+    background: $light-blue;
+
+    .card_title,
+    .card_text {
+        color: $white;
+    }
+
+    transition: ease 0.3s;
+}
+
+.card_title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: $text-color;
+    margin: 0 0 10px 0;
+    line-height: 18px;
+}
+
+.card_text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: $text-color;
+    line-height: 14px;
+    margin: 0;
+}
